@@ -116,8 +116,8 @@ EXAMPLE 3B
 </p>
 <p>
 
-When we look up the IP address for this VM through www.whatismyipaddress.com we see that this VM is showing the location for France (EXAMPLE 3C).
-  
+When we look up the IP address for the new VM inside the remote desktop at www.whatismyipaddress.com we see that this VM is showing the location for Canada. (EXAMPLE 3C).
+
 </p>
 <br />
 
