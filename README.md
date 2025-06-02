@@ -30,8 +30,8 @@ This section covers Virtual Private Networks (VPNs) and how they help protect re
 STEP 1 - Locate your own personal IP address by going to "www.whatismyipaddress.com" which will be able to show you your local IP address. We will use this later as well. See EXAMPLE 1A below.
 
 EXAMPLE 1A
-<p>
-<img src="https://i.imgur.com/qDgu5K6.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![image alt](https://github.com/user-attachments/assets/20b6840a-c1f5-4d47-bd7a-5eb97b3c292c)
+
 </p>
 <p>
 
