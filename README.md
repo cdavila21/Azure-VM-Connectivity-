@@ -1,57 +1,184 @@
-# Azure-VM-Connectivity
-Network Security Groups (NSGs) and Traffic Inspection Between Azure Virtual Machines
-In this lab, we explore how Network Security Groups (NSGs) function in Microsoft Azure by inspecting network traffic between Azure Virtual Machines (VMs) using Wireshark. This hands-on approach provides a deeper understanding of network security and communication protocols within Azure environments.
+# Vitual Private Network (VPN)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/148ea37f-12b6-4db2-9a6d-dd2d9df49395" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
-Technologies and Tools Used
-Cloud Platform: Microsoft Azure (Compute/Virtual Machines)
+<h1>VPN - Prerequisites and Installation</h1>
+In this section, we will explore Virtual Private Networks (VPNs) and their role in securing remote connections within a network infrastructure.<br />
 
-Remote Access: Remote Desktop Protocol (RDP)
+<h2>Environments and Technologies Used</h2>
 
-Utilities and Tools:
+- A VPN (Proton VPN)
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
 
-Command-line tools (CMD, PowerShell, SSH)
+<h2>Operating Systems Used </h2>
 
-Wireshark (for network protocol analysis)
+- Windows 10</b> (21H2)
 
-Protocols Analyzed:
+<h2>STEPS INCLUDED</h2>
 
-ICMP (Ping)
+- STEP 1 - Locate Local IP
+- STEP 2 - Setting Up VM Using Azure
+- STEP 3 - Locating IP Through VM (France)
+- STEP 4 - Connecting to VPN Through VM
+- STEP 5 - Locating IP Through VPN (Japan)
 
-SSH (Port 22)
+<h2>Installation Steps</h2>
 
-DHCP (Ports 67/68)
+STEP 1 - Locate your own personal IP address by going to "www.whatismyipaddress.com" which will be able to show you your local IP address. We will use this later as well. See EXAMPLE 1A below.
 
-DNS (Port 53)
+EXAMPLE 1A
+<p>
+<img src="https://i.imgur.com/qDgu5K6.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-RDP (Port 3389)
+Next we will set up our virtual machines on Azure. 
+  
+</p>
+<br />
 
-Operating Systems Involved
-Windows 10 (Version 21H2)
+STEP 2 - Go to www.portal.azure.com, create an account, open a subscription, create a resource group and find Virtual Machines. See Example 2A looking at the Virtual Machine set up page. 
 
-Ubuntu Server 20.04
+EXAMPLE 2A
+<p>
+<img src="https://i.imgur.com/K9oaS2z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-Overview of Lab Steps
-Create a Resource Group
+Creating the Virtual Machine on Example 2B the VM as “VM-FranceCentral” and select that for the REGION as well. Ensure the other items are selected as shown in EXAMPLE 2B & 2C.
 
-Use the Azure Portal or CLI to set up a resource group for organizing related resources.
+EXAMPLE 2B
+<p>
+<img src="https://i.imgur.com/u3vclL3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-Deploy Two Virtual Machines
+For the Username and Password you can create your credentials.
+  
+</p>
+<br />
 
-One VM running Windows 10 and another running Ubuntu Server 20.04.
+EXAMPLE 2C
+<p>
+<img src="https://i.imgur.com/rXIj3Zb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-Place both VMs in the same Virtual Network (VNet) and subnet to simplify traffic inspection.
+Select the “Networking” tab towards the top of the page and view EXAMPLE 2D inputs to match. 
+  
+</p>
+<br />
 
-Inspect and Analyze Traffic
+EXAMPLE 2D
+<p>
+<img src="https://i.imgur.com/OgYgNLK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-Use Wireshark and command-line tools to capture and analyze traffic for:
+Then select “Review and Create”, once it passes validation select “Create” at the bottom. 
+  
+</p>
+<br />
 
-ICMP (ping between VMs)
+NEXT: At the Virtual Machine we find that the IP to the Virtual Machine is “20.216.176.18”. See EXAMPLE 2E
 
-SSH (remote shell sessions)
+EXAMPLE 2E
 
-DHCP (IP address assignment)
+<p>
+<img src="https://i.imgur.com/ZlH9zI5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-DNS (domain resolution)
 
-RDP (remote desktop sessions)
+STEP 3 – Log Into the VM and Find IP Address
+<p>
+Now that we have set up the Virtual Machine we will connecting to it using the application “Remote Desktop Connection” (EXAMPLE 3A) and input the IP address for the VM that we located in EXAMPLE 2E and then input the set credentials we set when creating the VM (see EXAMPLE 3B). Once logged in, we will open the web browser and again look up www.whatismyipaddress.com (EXAMPLE 3C).
 
+  
+</p>
+<br />
+EXAMPLE 3A
+<p>
+<img src="https://i.imgur.com/YPBkMau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+  
+</p>
+<br />
+
+EXAMPLE 3B
+<p>
+<img src="https://i.imgur.com/oPJr2w2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+When we look up the IP address for this VM through www.whatismyipaddress.com we see that this VM is showing the location for France (EXAMPLE 3C).
+  
+</p>
+<br />
+
+EXAMPLE 3C
+<p>
+<img src="https://i.imgur.com/nWlX2UM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+STEP 4 – CONNECTING TO VPN (Free Version)
+
+Using the local computer go to protonvpn.com and create a free account (if you use the VM then French will display on your browser, so use local computer desktop). Once you are logged into your account, copy the URL from the Proton VPN website (EXAMPLE 4A) and then paste the URL to the VM web browser. 
+
+  
+</p>
+<br />
+
+EXAMPLE 4A
+<p>
+<img src="https://i.imgur.com/orO2O5y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+Once you have logged into your Proton VPN account on the VM, you will select “Downloads” and choose to download the “Windows” version. Once the application Proton VPN is installed we will log in using the credentials we used when setting up a free account on Proton VPN. Then connect to the VPN through the installed app. See EXAMPLE 4B when this steps are completed.  
+  
+</p>
+<br />
+
+
+EXAMPLE 4B
+<p>
+<img src="https://i.imgur.com/oqPHozb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+On the left hand side of the VPN you can select a country where you want your VPN to be, the image below shows the VPN being connected to an IP in Japan. See EXAMPLE 4C
+  
+</p>
+<br />
+
+EXAMPLE 4C
+<p>
+<img src="https://i.imgur.com/6Rdgg6B.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+Next we will look at the IP again using the VM browser now that we have connected the VPN to Japan. The website www.whatismyipaddress.com shows yet another IP address using the VPN from Japan. This is quite amazing.
+  
+</p>
+<br />
+
+EXAMPLE 4D
+<p>
+<img src="https://i.imgur.com/lQsISWb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+Looking at this exercise we see that we have utilized 3 different IP addresses just from your local computer to connect to the internet.
+Home IP (USA): 137.103.51.136
+Virtual Machin IP (France): 20.216.176.18
+Virtual Machin IP VPN (Japan) 212.102.51.251
+
+  
+</p>
+<br />
