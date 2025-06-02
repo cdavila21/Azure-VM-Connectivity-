@@ -4,7 +4,7 @@
 
 </p>
 
-<h1>VPN - Installation</h1>
+<h1>Installation & Requirements </h1>
 This section covers Virtual Private Networks (VPNs) and how they help protect remote connections within a network environment.<br />
 
 <h2>Environments and Technologies Used</h2>
