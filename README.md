@@ -1,4 +1,5 @@
 # Vitual Private Network (VPN)
+![image alt](https://github.com/cdavila21/Vitual-Private-Network/blob/main/How-vpn-works-01-1024x512-138588629.jpg?raw=true)
 <p align="center">
 <img src="https://github.com/user-attachments/assets/148ea37f-12b6-4db2-9a6d-dd2d9df49395" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
