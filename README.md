@@ -4,7 +4,7 @@
 </p>
 
 <h1>VPN - Prerequisites and Installation</h1>
-In this section, we will explore Virtual Private Networks (VPNs) and their role in securing remote connections within a network infrastructure.<br />
+This section covers Virtual Private Networks (VPNs) and how they help protect remote connections within a network environment.<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -39,7 +39,7 @@ Next we will set up our virtual machines on Azure.
 </p>
 <br />
 
-STEP 2 - Go to www.portal.azure.com, create an account, open a subscription, create a resource group and find Virtual Machines. See Example 2A looking at the Virtual Machine set up page. 
+STEP 2 - Go to www.portal.azure.com, create an account, open a subscription, create a resource group and find Virtual Machines. See Example 2A for the Virtual Machine set up page. 
 
 EXAMPLE 2A
 <p>
