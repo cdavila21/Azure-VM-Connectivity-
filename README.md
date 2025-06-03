@@ -48,11 +48,11 @@ EXAMPLE 2A
 </p>
 <p>
 
-Creating the Virtual Machine on Example 2B the VM as “VM-FranceCentral” and select that for the REGION as well. Ensure the other items are selected as shown in EXAMPLE 2B & 2C.
+Creating the Virtual Machine on Example 2B the VM name set to “Vpn-Test1-VM” with central Canada as the REGION. Ensure the other items are selected as shown in EXAMPLE 2B & 2C.
 
 EXAMPLE 2B
-<p>
-<img src="https://i.imgur.com/u3vclL3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image alt](https://github.com/cdavila21/Vitual-Private-Network/blob/main/canada.png?raw=true)
 </p>
 <p>
 
